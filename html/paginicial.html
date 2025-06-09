@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="header.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></head>
+<body>
+    
+    <header>
+        <div class="center">
+            <div class="logo"><img src="connect_resized.png" alt="logo" style="margin-left: 20px;"></div><!--logo-->
+            <div class="menu">
+                <a href="paginicial.html">Home</a>
+                <a id="servicos" href="servicos.html">Serviços</a>
+                <a href="pagfuncionários.html">Funcionários</a>
+                <a href="testemunhos.html">Testemunhos</a>
+                <a href="contato.html">Contato</a>
+            </div><!--menu-->
+            <div class="user" style="margin-right: 50px;">
+                <img class="perfil me-3" width="50px" id="perfil" src="https://i.pinimg.com/originals/54/bf/7a/54bf7a45856c608fe7165a908d57c7cf.png" alt="perfil">
+                <a class="me-3" href="perfil.html" id="perfil">Perfil</a>
+                <a class="me-3" href="signup.html" id="cadastro">Cadastro</a>
+                <a href="signin.html" id="login">Login</a>
+
+            </div><!--User-->
+        </div><!--center-->
+    </header>
+
+  <Main class="container-fluid">
+    <div class="parte1">
+      <h1 class="txt">O melhor lugar<br> para tratar do<br> seu melhor amigo(a)</h1>
+      <img class= "img1" src="connect.png" alt="" height="350px" width="350px" style="margin-right: 60%;">
+    </div>
+
+    <h1 class="txt2">Notícias</h1>
+    <div class="parte2">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="noticia.jpg" height="300px" width="300px" alt="..." style="margin-left: 770px;">
+              </div>
+              <div class="carousel-item">
+                <img src="noticia2.jpg" height="300px" width="300px" alt="..." style="margin-left: 770px;">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+    
+    <h1>Eventos</h1>
+    <div class="parte3">
+      <img class= "img2" src="evento.png" alt="" height="300px" width="800px" style="margin-left: -150px;">
+    </div>
+    
+  </Main>
+  <footer class="text-warning bg-green container-fluid d-flex justify-content-around align-items-center bg-light mt-auto">
+    <div class="logoFooter col-2">
+        <img src="connect_resized.png" alt="logo">
+    </div>
+    <div class="col-2">
+        <ul>
+            <h6>Serviços</h6>
+            <li>O que fazemos</li>
+            <li>Valores</li>
+        </ul>
+    </div>
+    <div class="col-2">
+        <ul>
+            <h6>Recursos</h6>
+            <li>Blog</li>
+            <li>Contato</li>
+        </ul>
+    </div>
+    <div class="col-2">
+        <ul>
+            <h6>ConnectPet</h6>
+            <li>Sobre</li>
+            <li>Faça parte</li>
+        </ul>
+    </div>
+    <div class="col-2">
+        <h6>Se inscreva para receber novidades!</h6>
+        <div>
+            <input type="text" placeholder="Coloque seu email">
+            <button class="btn btn-outline-primary">Inscrever</button>
+        </div>
+    </div>
+</footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+
+  $(document).ready(function() {
+      
+      const dados = JSON.parse(localStorage.getItem('userLogado'));
+      console.log('Dados armazenados:');
+      console.log(dados);
+      if (dados == null ){
+        const elservicos = document.querySelector('#servicos');
+        elservicos.style.display= "none"
+        const elperfil = document.querySelector('#perfil')
+        elperfil.style.display= "none"
+      }      
+      else {
+        const elcadastro = document.querySelector('#cadastro');
+        elcadastro.style.display= "none"
+        const ellogin = document.querySelector('#login');
+        ellogin.style.display= "none"
+      }
+
+  });
+  
+  </script>
+
+</body>
+</html>
+

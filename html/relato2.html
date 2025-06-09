@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>ConnectPet</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="header.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="center">
+                <div class="logo"><img src="connect_resized.png" alt="logo" style="margin-left: 20px;"></div><!--logo-->
+                <div class="menu">
+                    <a href="paginicial.html">Home</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="pagfuncionários.html">Funcionários</a>
+                    <a href="testemunhos.html">Testemunhos</a>
+                    <a href="contato.html">Contato</a>
+                </div><!--menu-->
+                <div class="user" style="margin-right: 50px;">
+                    <img class="perfil" width="50px" id="perfil" src="https://i.pinimg.com/originals/54/bf/7a/54bf7a45856c608fe7165a908d57c7cf.png" alt="perfil">
+                    <a href="perfil.html"><p class="user-name" id="nomeUsuario">Usuario</p></a> 
+                </div><!--User-->
+            </div><!--center-->
+        </header>
+
+        <div class="container d-flex" style="align-items: start; ">
+        <h1>Alguns Relatos:</h1>
+        <div class="pesquisar d-flex" style="align-items: right; height: 50px;">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 200px;">
+            <button class="btn btn-success" type="submit">Pesquisar</button>
+        </div><!--pesquisar-->
+
+        </div><!--relatos-->
+        
+        <div class="container d-flex justify-content-around">
+            <div class="row">
+                <div class="col-8 col-sm-3">
+                    <div class="card" style="width: 1000px; height: 500px;">
+                        <div class="card-body">
+                          <h5 class="card-title">Pedro</h5>
+                          <p class="card-text">"Meu nome é Pedro e tenho um gato chamado Tom. Recentemente, precisei viajar a trabalho e fiquei preocupado em deixar o Tom sozinho em casa. Felizmente, descobri o serviço de hospedagem do ConnectPet. Eles cuidaram do Tom como se ele fosse da família! O ambiente era limpo e acolhedor, com áreas espaçosas para brincar e relaxar. Recebi atualizações regulares e fotos do Tom durante a hospedagem, o que me deixou tranquilo durante a viagem. Quando peguei o Tom de volta, ele estava feliz e saudável. Estou muito grato pela equipe do ConnectPet por fornecer um serviço de hospedagem confiável e amoroso."
+                          </p>
+                          <a href="testemunhos.html" class="btn btn-success" style="margin-top: 260px;">Voltar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="container-fluid d-flex justify-content-around align-items-center bg-light" style="margin-top: 100px;">
+            <div class="logoFooter col-2">
+                <img src="connect_resized.png" alt="logo">
+            </div>
+            <div class="col-2">
+                <ul>
+                    <h6>Serviços</h6>
+                    <li>O que fazemos</li>
+                    <li>Valores</li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <ul>
+                    <h6>Recursos</h6>
+                    <li>Blog</li>
+                    <li>Contato</li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <ul>
+                    <h6>ConnectPet</h6>
+                    <li>Sobre</li>
+                    <li>Faça parte</li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <h6>Se inscreva para receber novidades!</h6>
+                <div>
+                    <input type="text" placeholder="Coloque seu email">
+                    <button class="btn btn-outline-primary">Inscrever</button>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

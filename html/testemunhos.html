@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>ConnectPet</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="header.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="center">
+                <div class="logo"><img src="connect_resized.png" alt="logo" style="margin-left: 20px;"></div><!--logo-->
+                <div class="menu">
+                    <a href="paginicial.html">Home</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a href="pagfuncionários.html">Funcionários</a>
+                    <a href="testemunhos.html">Testemunhos</a>
+                    <a href="contato.html">Contato</a>
+                </div><!--menu-->
+                <div class="user" style="margin-right: 50px;">
+                    <img class="perfil" width="50px" id="perfil" src="https://i.pinimg.com/originals/54/bf/7a/54bf7a45856c608fe7165a908d57c7cf.png" alt="perfil">
+                    <a href="perfil.html"><p class="user-name" id="nomeUsuario">Usuario</p></a> 
+                </div><!--User-->
+            </div><!--center-->
+        </header>
+
+        <div class="container d-flex" style="align-items: start; ">
+        <h1>Alguns Relatos:</h1>
+        <div class="pesquisar d-flex" style="align-items: right; height: 50px;">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 200px;">
+            <button class="btn btn-success" type="submit">Pesquisar</button>
+        </div><!--pesquisar-->
+
+        </div><!--relatos-->
+        
+        <div class="container d-flex justify-content-around">
+            <div class="row">
+                <div class="col-6 col-sm-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/cliente.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Ana</h5>
+                          <p class="card-text">"Sou a Ana, uma apaixonada por cães, e levei meu fiel amigo, o Rex, para uma visita ao ConnectPet. Desde o momento em que entramos na loja, fomos recebidos com sorrisos calorosos. A equipe foi extremamente..."
+                        </p>
+                          <a href="relato1.html" class="btn btn-success">Relato Completo</a>
+                        </div>
+                    </div>
+                </div><!--colcard1-->
+                <div class="col-6 col-sm-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/cliente.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Pedro</h5>
+                          <p class="card-text">"Meu nome é Pedro e tenho um gato chamado Tom. Recentemente, precisei viajar a trabalho e fiquei preocupado em deixar o Tom sozinho em casa. Felizmente, descobri o serviço de hospedagem do ConnectPet..."</p>
+                          <a href="relato2.html" class="btn btn-success">Relato Completo</a>
+                        </div>
+                    </div>
+                </div><!--colcard2-->
+                <div class="col-6 col-sm-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/cliente.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Laura</h5>
+                          <p class="card-text">"Meu nome é Laura e sou mãe de uma linda coelha chamada Luna. Quando percebi que Luna estava um pouco entediada em casa, decidi levá-la ao ConnectPet para um dia de banho e tosa. Fiquei impressionada..."</p>
+                          <a href="relato3.html" class="btn btn-success">Relato Completo</a>
+                        </div>
+                    </div>
+                </div><!--colcard3-->
+                <div class="col-6 col-sm-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/cliente.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Marcelo</h5>
+                          <p class="card-text">"Meu nome é Marcelo e tenho um cachorro chamado Max. Recentemente, tive problemas para encontrar uma loja de animais que oferecesse produtos específicos para a dieta especial do Max. Foi então que encontrei o ConnectPet..."</p>
+                          <a href="relato4.html" class="btn btn-success">Relato Completo</a>
+                        </div>
+                    </div>
+                </div><!--colcard4-->
+            </div>
+        </div><!--cards-->
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin: 50px; justify-content: center;">
+            <div class="btn-group me-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-outline-secondary"><</button>
+              <button type="button" class="btn btn-outline-secondary">1</button>
+              <button type="button" class="btn btn-outline-secondary">2</button>
+              <button type="button" class="btn btn-outline-secondary">3</button>
+            </div>
+            <div class="btn-group me-2" role="group" aria-label="Second group">
+              <button type="button" class="btn btn-outline-secondary">...</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+              <button type="button" class="btn btn-outline-secondary">5</button>
+              <button type="button" class="btn btn-outline-secondary">6</button>  
+              <button type="button" class="btn btn-outline-secondary">></button>
+            </div>
+          </div>  
+
+          <footer class="container-fluid d-flex justify-content-around align-items-center bg-light mt-auto">
+            <div class="logoFooter col-2">
+                <img src="connect_resized.png" alt="logo">
+            </div>
+            <div class="col-2">
+                <ul>
+                    <h6>Serviços</h6>
+                    <li>O que fazemos</li>
+                    <li>Valores</li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <ul>
+                    <h6>Recursos</h6>
+                    <li>Blog</li>
+                    <li>Contato</li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <ul>
+                    <h6>ConnectPet</h6>
+                    <li>Sobre</li>
+                    <li>Faça parte</li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <h6>Se inscreva para receber novidades!</h6>
+                <div>
+                    <input type="text" placeholder="Coloque seu email">
+                    <button class="btn btn-outline-primary">Inscrever</button>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
