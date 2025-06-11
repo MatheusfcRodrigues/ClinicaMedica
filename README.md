@@ -1,6 +1,23 @@
 # 🏥 Sistema de Gestão de Consultas Médicas
 
-Este é um projeto acadêmico focado no desenvolvimento de um sistema para gestão de consultas médicas em uma clínica. O sistema permite o cadastro e gerenciamento de médicos, pacientes e consultas, garantindo integridade de horários e histórico de atendimentos.
+O presente sistema foi concebido com foco na gestão centralizada de múltiplas clínicas médicas, oferecendo uma plataforma unificada e escalável para o administrador geral. A aplicação, desenvolvida em C# com ASP.NET e interface baseada em HTML e Bootstrap, está preparada para atender às demandas de diferentes unidades clínicas, mantendo organização, segurança e eficiência no gerenciamento de dados e agendas médicas.
+
+Finalidade do Sistema
+
+- O sistema tem como principal objetivo possibilitar ao administrador da plataforma o controle total sobre os recursos das clínicas vinculadas, permitindo:
+Cadastro e gerenciamento de clínicas e suas respectivas unidades.
+
+
+- Controle centralizado de médicos, pacientes e agendamentos.
+
+
+- Acompanhamento de agendas e históricos de atendimentos por clínica.
+
+
+- Monitoramento de conflitos de horários e disponibilidade por unidade.
+
+
+- Visão geral de dados operacionais das clínicas em tempo real.
 
 ## 📌 Objetivo
 
@@ -44,8 +61,8 @@ Este é um projeto acadêmico focado no desenvolvimento de um sistema para gest�
 
 - Linguagem: `C#` (.NET)
 - Banco de Dados: `MySQL`
-- IDE: `Visual Studio` ou `Visual Studio Code`
-- Ferramentas: `MySQL Workbench`, `Entity Framework` (opcional)
+- IDE:`VisualVisual Studio Code`
+- Ferramentas: `MySQL Workbench`, `Entity Framework`,`Minimal API`
 
 ---
 
