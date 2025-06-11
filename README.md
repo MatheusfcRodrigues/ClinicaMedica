@@ -59,9 +59,9 @@ Cadastro e gerenciamento de clínicas e suas respectivas unidades.
 
 ## 🔧 Tecnologias Utilizadas
 
-- Linguagem: `C#` (.NET)
+- Linguagem: `C#` `HTML` `CSS``JS`(.NET)
 - Banco de Dados: `MySQL`
-- IDE:`VisualVisual Studio Code`
+- IDE:`Visual Studio Code`
 - Ferramentas: `MySQL Workbench`, `Entity Framework`,`Minimal API`
 
 ---
