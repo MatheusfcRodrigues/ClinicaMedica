@@ -1,71 +1,24 @@
-let btn = document.querySelector('.fa-eye')
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-btn.addEventListener('click', ()=>{
-  let inputSenha = document.querySelector('#senha')
-  
-  if(inputSenha.getAttribute('type') == 'password'){
-    inputSenha.setAttribute('type', 'text')
-  } else {
-    inputSenha.setAttribute('type', 'password')
-  }
-})
+    const usuario = document.getElementById('usuario').value;
+    const senha = document.getElementById('senha').value;
 
-function entrar(){
-  let usuario = document.querySelector('#usuario')
-  let userLabel = document.querySelector('#userLabel')
-  
-  let senha = document.querySelector('#senha')
-  let senhaLabel = document.querySelector('#senhaLabel')
-  
-  let msgError = document.querySelector('#msgError')
-  let listaUser = []
-  
-  let userValid = {
-    nome: '',
-    user: '',
-    senha: '',
-    telefone: '',
-    idade: '',
-    nomepet: '',
-    raça: '',
-  }
-  
-  listaUser = JSON.parse(localStorage.getItem('listaUser'))
-  
-  listaUser.forEach((item) => {
-    if(usuario.value == item.userCad && senha.value == item.senhaCad){
-       
-      userValid = {
-         nome: item.nomeCad,
-         user: item.userCad,
-         senha: item.senhaCad,
-         telefone: item.telefoneCad,
-         idade: item.idadeCad,
-         nomepet: item.nomepet,
-         raça: item.raça,
-       }
-      
+    const response = await fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ usuario, senha })
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+        console.log("Login feito com sucesso", data);
+        // Você pode salvar o token em localStorage, por exemplo:
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("user", JSON.stringify(data.userLogado));
+        window.location.href = "dashboard.html"; // redireciona
+    } else {
+        alert(data.message || "Falha no login");
     }
-  })
-   
-  if(usuario.value == userValid.user && senha.value == userValid.senha){
-    window.location.href = 'paginicial.html'
-    
-    let mathRandom = Math.random().toString(16).substr(2)
-    let token = mathRandom + mathRandom
-    
-    localStorage.setItem('token', token)
-    localStorage.setItem('userLogado', JSON.stringify(userValid))
-  } else {
-    userLabel.setAttribute('style', 'color: red')
-    usuario.setAttribute('style', 'border-color: red')
-    senhaLabel.setAttribute('style', 'color: red')
-    senha.setAttribute('style', 'border-color: red')
-    msgError.setAttribute('style', 'display: block')
-    msgError.innerHTML = 'Usuário ou senha incorretos'
-    usuario.focus()
-  }
-  
-}
-
-
+});
