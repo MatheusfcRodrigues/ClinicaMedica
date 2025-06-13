@@ -1,20 +1,17 @@
+// Em Program.cs
 namespace ClinicaWinForms
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        /// 
+        // A instância é criada aqui, mas suas listas internas estão VAZIAS.
         public static Clinica ClinicaInstance = new Clinica();
 
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.SetCompatibleTextRenderingDefault(false);
+            // Form1 é o seu menu principal
             Application.Run(new Form1());
         }
     }

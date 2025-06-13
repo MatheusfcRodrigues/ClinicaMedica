@@ -26,20 +26,37 @@ namespace ClinicaWinForms
         {
             try
             {
+                // 1. Coleta os dados do formulário
                 var paciente = new Paciente
                 {
                     Nome = txtNome.Text,
                     CPF = txtCPF.Text,
+                    // Certifique-se que 'dptNascimento' é o nome correto do seu controle DateTimePicker
                     DataNascimento = dptNascimento.Value
                 };
 
-                clinica.CadastrarPaciente(paciente);
-                MessageBox.Show($"Pacientes cadastrado com sucesso!");
+                // 2. Validação para campos obrigatórios (recomendado)
+                if (string.IsNullOrWhiteSpace(paciente.Nome) || string.IsNullOrWhiteSpace(paciente.CPF))
+                {
+                    MessageBox.Show("Os campos Nome e CPF são obrigatórios.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // 3. CORREÇÃO PRINCIPAL: Usa o PacienteDAL para salvar no banco de dados
+                PacienteDAL pacienteDAL = new PacienteDAL();
+                pacienteDAL.CadastrarPaciente(paciente);
+
+                // 4. Feedback de sucesso para o usuário e fechamento do formulário
+                MessageBox.Show("Paciente cadastrado com sucesso!", "Sucesso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                // O try-catch vai capturar erros do banco, como CPF duplicado
+                MessageBox.Show("Erro ao cadastrar paciente. Verifique os dados e tente novamente.\n\nDetalhes: " + ex.Message, "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

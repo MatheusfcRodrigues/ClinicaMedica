@@ -98,18 +98,4 @@ public class Clinica
                         .ToList();
     }
 
-    public void SalvarDados()
-    {
-        Persistencia.Salvar("medicos.json", Medicos);
-        Persistencia.Salvar("pacientes.json", Pacientes);
-        Persistencia.Salvar("consultas.json", Consultas);
-    }
-
-    public void CarregarDados()
-    {
-        Medicos = Persistencia.Carregar<Medico>("medicos.json");
-        Pacientes = Persistencia.Carregar<Paciente>("pacientes.json");
-        Consultas = Persistencia.Carregar<Consulta>("consultas.json");
-    }
-
 }

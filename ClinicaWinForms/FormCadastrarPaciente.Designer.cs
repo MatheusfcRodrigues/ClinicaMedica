@@ -27,28 +27,28 @@
             // 
             txtNome.Location = new Point(100, 20);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(200, 23);
+            txtNome.Size = new Size(200, 27);
             txtNome.TabIndex = 0;
             // 
             // txtCPF
             // 
             txtCPF.Location = new Point(100, 60);
             txtCPF.Name = "txtCPF";
-            txtCPF.Size = new Size(200, 23);
+            txtCPF.Size = new Size(200, 27);
             txtCPF.TabIndex = 1;
             // 
             // dptNascimento
             // 
             dptNascimento.CustomFormat = "dd/MM/yyyy";
             dptNascimento.Format = DateTimePickerFormat.Custom;
-            dptNascimento.Location = new Point(170, 110);
+            dptNascimento.Location = new Point(199, 105);
             dptNascimento.Name = "dptNascimento";
-            dptNascimento.Size = new Size(200, 23);
+            dptNascimento.Size = new Size(158, 27);
             dptNascimento.TabIndex = 2;
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(100, 160);
+            btnSalvar.Location = new Point(136, 158);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(100, 30);
             btnSalvar.TabIndex = 3;
@@ -60,7 +60,7 @@
             lblNome.AutoSize = true;
             lblNome.Location = new Point(30, 20);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(43, 15);
+            lblNome.Size = new Size(53, 20);
             lblNome.TabIndex = 0;
             lblNome.Text = "Nome:";
             // 
@@ -69,16 +69,16 @@
             lblCPF.AutoSize = true;
             lblCPF.Location = new Point(30, 60);
             lblCPF.Name = "lblCPF";
-            lblCPF.Size = new Size(31, 15);
+            lblCPF.Size = new Size(36, 20);
             lblCPF.TabIndex = 1;
             lblCPF.Text = "CPF:";
             // 
             // lblNascimento
             // 
             lblNascimento.AutoSize = true;
-            lblNascimento.Location = new Point(30, 115);
+            lblNascimento.Location = new Point(30, 105);
             lblNascimento.Name = "lblNascimento";
-            lblNascimento.Size = new Size(117, 15);
+            lblNascimento.Size = new Size(148, 20);
             lblNascimento.TabIndex = 2;
             lblNascimento.Text = "Data de Nascimento:";
             // 

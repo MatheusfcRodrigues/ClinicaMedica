@@ -14,74 +14,86 @@
 
         private void InitializeComponent()
         {
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtCRM = new System.Windows.Forms.TextBox();
-            this.txtEspecialidade = new System.Windows.Forms.TextBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.lblCRM = new System.Windows.Forms.Label();
-            this.lblEspecialidade = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(30, 20);
-            this.lblNome.Text = "Nome:";
+            txtNome = new TextBox();
+            txtCRM = new TextBox();
+            txtEspecialidade = new TextBox();
+            btnSalvar = new Button();
+            lblNome = new Label();
+            lblCRM = new Label();
+            lblEspecialidade = new Label();
+            SuspendLayout();
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(100, 20);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(200, 23);
-            this.txtNome.TabIndex = 0;
-            // 
-            // lblCRM
-            // 
-            this.lblCRM.AutoSize = true;
-            this.lblCRM.Location = new System.Drawing.Point(30, 60);
-            this.lblCRM.Text = "CRM:";
+            txtNome.Location = new Point(100, 20);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(200, 27);
+            txtNome.TabIndex = 0;
             // 
             // txtCRM
             // 
-            this.txtCRM.Location = new System.Drawing.Point(100, 60);
-            this.txtCRM.Name = "txtCRM";
-            this.txtCRM.Size = new System.Drawing.Size(200, 23);
-            this.txtCRM.TabIndex = 1;
-            // 
-            // lblEspecialidade
-            // 
-            this.lblEspecialidade.AutoSize = true;
-            this.lblEspecialidade.Location = new System.Drawing.Point(30, 100);
-            this.lblEspecialidade.Text = "Especialidade:";
+            txtCRM.Location = new Point(100, 60);
+            txtCRM.Name = "txtCRM";
+            txtCRM.Size = new Size(200, 27);
+            txtCRM.TabIndex = 1;
             // 
             // txtEspecialidade
             // 
-            this.txtEspecialidade.Location = new System.Drawing.Point(115, 100);
-            this.txtEspecialidade.Name = "txtEspecialidade";
-            this.txtEspecialidade.Size = new System.Drawing.Size(200, 23);
-            this.txtEspecialidade.TabIndex = 2;
+            txtEspecialidade.Location = new Point(138, 96);
+            txtEspecialidade.Name = "txtEspecialidade";
+            txtEspecialidade.Size = new Size(200, 27);
+            txtEspecialidade.TabIndex = 2;
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(100, 140);
-            this.btnSalvar.Size = new System.Drawing.Size(100, 30);
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            btnSalvar.Location = new Point(127, 158);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(100, 30);
+            btnSalvar.TabIndex = 3;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.Click += btnSalvar_Click;
+            // 
+            // lblNome
+            // 
+            lblNome.AutoSize = true;
+            lblNome.Location = new Point(30, 20);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(53, 20);
+            lblNome.TabIndex = 0;
+            lblNome.Text = "Nome:";
+            // 
+            // lblCRM
+            // 
+            lblCRM.AutoSize = true;
+            lblCRM.Location = new Point(30, 60);
+            lblCRM.Name = "lblCRM";
+            lblCRM.Size = new Size(43, 20);
+            lblCRM.TabIndex = 1;
+            lblCRM.Text = "CRM:";
+            // 
+            // lblEspecialidade
+            // 
+            lblEspecialidade.AutoSize = true;
+            lblEspecialidade.Location = new Point(28, 99);
+            lblEspecialidade.Name = "lblEspecialidade";
+            lblEspecialidade.Size = new Size(104, 20);
+            lblEspecialidade.TabIndex = 2;
+            lblEspecialidade.Text = "Especialidade:";
             // 
             // FormCadastrarMedico
             // 
-            this.ClientSize = new System.Drawing.Size(350, 200);
-            this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.lblCRM);
-            this.Controls.Add(this.txtCRM);
-            this.Controls.Add(this.lblEspecialidade);
-            this.Controls.Add(this.txtEspecialidade);
-            this.Controls.Add(this.btnSalvar);
-            this.Text = "Cadastro de Médico";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            ClientSize = new Size(350, 200);
+            Controls.Add(lblNome);
+            Controls.Add(txtNome);
+            Controls.Add(lblCRM);
+            Controls.Add(txtCRM);
+            Controls.Add(lblEspecialidade);
+            Controls.Add(txtEspecialidade);
+            Controls.Add(btnSalvar);
+            Name = "FormCadastrarMedico";
+            Text = "Cadastro de Médico";
+            ResumeLayout(false);
+            PerformLayout();
         }
     }
 }

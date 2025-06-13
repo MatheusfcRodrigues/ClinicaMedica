@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Clínica_Médica
 {
-    using System;
-
     public class Paciente : Pessoa
     {
+        public int Id { get; set; }
         public string CPF { get; set; }
         public DateTime DataNascimento { get; set; }
     }
