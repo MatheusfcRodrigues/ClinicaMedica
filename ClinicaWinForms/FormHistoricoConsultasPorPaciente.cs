@@ -62,10 +62,17 @@ namespace ClinicaWinForms
                 // O resto do seu código para formatar os dados continua igual e agora vai funcionar!
                 var dados = consultas.Select(c => new
                 {
+                    Id = c.Id,
                     Hora = c.DataHora.ToString("dd/MM/yyyy HH:mm"),
                     Médico = c.Medico.Nome,
                     Especialidade = c.Medico.Especialidade
                 }).ToList();
+
+                //Só serve para escondar o ID do paciente
+                if (dgvHistorico.Columns["Id"] != null)
+                {
+                    dgvHistorico.Columns["Id"].Visible = false;
+                }
 
                 // Use o nome correto do seu DataGridView
                 dgvHistorico.DataSource = dados;
@@ -73,6 +80,46 @@ namespace ClinicaWinForms
             catch (Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro ao buscar o histórico: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCancelarConsulta_Click(object sender, EventArgs e)
+        {
+            // 1. Verifica se alguma linha da grade está selecionada
+            if (dgvHistorico.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Por favor, selecione na grade a consulta que deseja cancelar.", "Seleção Necessária",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 2. Pede confirmação ao usuário (MUITO IMPORTANTE!)
+            var resposta = MessageBox.Show("Tem certeza que deseja cancelar permanentemente esta consulta?", "Confirmar Cancelamento",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resposta == DialogResult.Yes)
+            {
+                try
+                {
+                    // 3. Obtém o ID da consulta da linha selecionada (da coluna invisível que criamos)
+                    int consultaId = Convert.ToInt32(dgvHistorico.SelectedRows[0].Cells["Id"].Value);
+
+                    // 4. Chama o método do DAL para deletar do banco de dados
+                    ConsultaDAL consultaDAL = new ConsultaDAL();
+                    consultaDAL.CancelarConsulta(consultaId);
+
+                    MessageBox.Show("Consulta cancelada com sucesso!", "Sucesso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // 5. Atualiza a grade para remover a consulta cancelada da exibição
+                    // A forma mais fácil é chamar o evento de clique do botão de listar novamente.
+                    btnMostrarHistorico_Click(sender, e);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocorreu um erro ao cancelar a consulta: " + ex.Message, "Erro",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

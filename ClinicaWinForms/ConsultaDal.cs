@@ -121,5 +121,23 @@ namespace ClinicaWinForms
             }
             return listaConsultas;
         }
+        
+        public void CancelarConsulta(int consultaId)
+        {
+            using (var conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                // O comando SQL para deletar é simples: DELETE FROM [tabela] WHERE [condição]
+                string sql = "DELETE FROM Consultas WHERE Id = @Id";
+                var cmd = new SqlCommand(sql, conn);
+
+                // Usamos o parâmetro para segurança e para especificar qual consulta deletar
+                cmd.Parameters.AddWithValue("@Id", consultaId);
+
+                // ExecuteNonQuery é usado para comandos que não retornam dados (INSERT, UPDATE, DELETE)
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

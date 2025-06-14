@@ -22,7 +22,6 @@ public class MedicoDAL
                 {
                     var medico = new Medico
                     {
-                        // Aqui você precisa garantir que sua classe Medico tenha um 'Id'
                         Id = reader.GetInt32(0),
                         Nome = reader.GetString(1),
                         CRM = reader.GetString(2),

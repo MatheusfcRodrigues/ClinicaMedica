@@ -28,51 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbPacientes = new ComboBox();
-            this.btnMostrarHistorico = new Button();
-            this.dgvHistorico = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
-            this.SuspendLayout();
+            cmbPacientes = new ComboBox();
+            btnMostrarHistorico = new Button();
+            dgvHistorico = new DataGridView();
+            btnCancelarConsulta = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvHistorico).BeginInit();
+            SuspendLayout();
             // 
             // cmbPacientes
             // 
-            this.cmbPacientes.FormattingEnabled = true;
-            this.cmbPacientes.Location = new Point(20, 20);
-            this.cmbPacientes.Name = "cmbPacientes";
-            this.cmbPacientes.Size = new Size(350, 23);
-            this.cmbPacientes.TabIndex = 0;
-            this.cmbPacientes.Text = "Selecione o Paciente";
+            cmbPacientes.FormattingEnabled = true;
+            cmbPacientes.Location = new Point(23, 27);
+            cmbPacientes.Margin = new Padding(3, 4, 3, 4);
+            cmbPacientes.Name = "cmbPacientes";
+            cmbPacientes.Size = new Size(399, 28);
+            cmbPacientes.TabIndex = 0;
+            cmbPacientes.Text = "Selecione o Paciente";
             // 
             // btnMostrarHistorico
             // 
-            this.btnMostrarHistorico.Location = new Point(380, 20);
-            this.btnMostrarHistorico.Name = "btnMostrarHistorico";
-            this.btnMostrarHistorico.Size = new Size(130, 30);
-            this.btnMostrarHistorico.TabIndex = 1;
-            this.btnMostrarHistorico.Text = "Mostrar Histórico";
-            this.btnMostrarHistorico.UseVisualStyleBackColor = true;
-            this.btnMostrarHistorico.Click += new EventHandler(this.btnMostrarHistorico_Click);
+            btnMostrarHistorico.Location = new Point(455, 27);
+            btnMostrarHistorico.Margin = new Padding(3, 4, 3, 4);
+            btnMostrarHistorico.Name = "btnMostrarHistorico";
+            btnMostrarHistorico.Size = new Size(149, 28);
+            btnMostrarHistorico.TabIndex = 1;
+            btnMostrarHistorico.Text = "Mostrar Histórico";
+            btnMostrarHistorico.UseVisualStyleBackColor = true;
+            btnMostrarHistorico.Click += btnMostrarHistorico_Click;
             // 
             // dgvHistorico
             // 
-            this.dgvHistorico.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorico.Location = new Point(20, 70);
-            this.dgvHistorico.Name = "dgvHistorico";
-            this.dgvHistorico.Size = new Size(630, 330);
-            this.dgvHistorico.TabIndex = 2;
+            dgvHistorico.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvHistorico.Location = new Point(23, 93);
+            dgvHistorico.Margin = new Padding(3, 4, 3, 4);
+            dgvHistorico.Name = "dgvHistorico";
+            dgvHistorico.RowHeadersWidth = 51;
+            dgvHistorico.Size = new Size(720, 265);
+            dgvHistorico.TabIndex = 2;
+            // 
+            // btnCancelarConsulta
+            // 
+            btnCancelarConsulta.Location = new Point(23, 440);
+            btnCancelarConsulta.Name = "btnCancelarConsulta";
+            btnCancelarConsulta.Size = new Size(178, 47);
+            btnCancelarConsulta.TabIndex = 3;
+            btnCancelarConsulta.Text = "Cancelar Consulta";
+            btnCancelarConsulta.UseVisualStyleBackColor = true;
+            btnCancelarConsulta.Click += btnCancelarConsulta_Click;
             // 
             // FormHistoricoConsultasPorPaciente
             // 
-            this.AutoScaleDimensions = new SizeF(7F, 15F);
-            this.AutoScaleMode = AutoScaleMode.Font;
-            this.ClientSize = new Size(680, 420);
-            this.Controls.Add(this.dgvHistorico);
-            this.Controls.Add(this.btnMostrarHistorico);
-            this.Controls.Add(this.cmbPacientes);
-            this.Name = "FormHistoricoConsultasPorPaciente";
-            this.Text = "Histórico de Consultas por Paciente";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(777, 560);
+            Controls.Add(btnCancelarConsulta);
+            Controls.Add(dgvHistorico);
+            Controls.Add(btnMostrarHistorico);
+            Controls.Add(cmbPacientes);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "FormHistoricoConsultasPorPaciente";
+            Text = "Histórico de Consultas por Paciente";
+            ((System.ComponentModel.ISupportInitialize)dgvHistorico).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -80,5 +97,6 @@
         private ComboBox cmbPacientes;
         private Button btnMostrarHistorico;
         private DataGridView dgvHistorico;
+        private Button btnCancelarConsulta;
     }
 }
